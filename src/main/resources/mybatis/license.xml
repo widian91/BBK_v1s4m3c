@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "license">
+  <insert id="create" parameterType="LicenseVO">
+    INSERT INTO license(lc_no, lc_nick, lc_title, lc_content, lc_date)
+    VALUES((SELECT NVL(MAX(lc_no), 0)+1 as lc_no FROM license), 
+    #{lc_nick}, #{lc_title}, #{lc_content}, sysdate)
+  </insert>
+  
+  <!-- 검색을하지 않는 전체 목록 -->
+  <select id="list" resultType="LicenseVO">
+    SELECT lc_no, lc_nick, lc_title, lc_content, lc_date
+    FROM license
+    ORDER BY lc_no ASC
+  </select>
+  
+  <update id="update" parameterType="LicenseVO">
+    UPDATE license 
+    SET lc_nick=#{lc_nick}, lc_title=#{lc_title}, lc_content=#{lc_content} 
+    WHERE lc_no=#{lc_no}
+  </update>
+</mapper>

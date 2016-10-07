@@ -1,0 +1,223 @@
+  /* version 4.0 */
+  *{ 
+    font-family: 맑은 고딕; 
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px; 
+  }
+  
+  BODY{
+    width: 80%;
+    margin: 0px auto; /* 0px: 위아래 간격, auto: 좌우 간격, 가운데 정렬 */
+    background-image: url('/menu/images/back03.jpg');
+  }
+  
+  IMG{
+    border: none;
+  }
+
+  A:LINK{ /* 기본 링크 속성 */
+    color: #333333;
+    text-decoration: none; /* 밑줄 삭제 */
+  }
+  
+  A:VISITED{
+    color: #333333;
+    text-decoration: none; /* 밑줄 삭제 */    
+  }
+  
+  A:HOVER{ /* A 태그에 마우스가 올라간 상태 */
+    color: #5555FF;
+    text-decoration: underline; /* 밑줄 삭제 */    
+  }
+  
+  A:ACTIVE{ /* A 태그에 클릭 상태 */
+    color: #5555FF;
+    text-decoration: underline; /* 밑줄 삭제 */    
+  }
+  
+  .title{
+    text-align: center;
+    border: solid 1px #AAAAAA;
+    width: 20%;
+    margin: 20px auto;  /* 위아래 좌우 */
+    padding: 3px;
+    background-color: #EEEEEE;
+  }
+  
+  .content{
+    width: 100%;
+    border: none;
+    margin: 20px auto;
+  }
+  
+  form ul li{
+    list-style: none; /* 블렛 기호 생략 */
+    margin: 10px 10px; 
+  }
+
+  fieldset ul li{
+    list-style: none; /* 블렛 기호 생략 */
+    margin: 10px 10px; 
+  }
+ 
+  form fieldset legend{
+    margin: 0px 10px;
+  }
+
+ .table{
+    border: solid 1px #999999;
+    border-collapse: collapse; /* 셀 경계선 병합 */
+    margin: 0px auto;
+    width: 100%;
+  }
+ 
+  .th{
+    background-color: #D6F330;
+    border: solid 1px #999999;
+  }
+  
+  .td{
+    border: solid 1px #999999;
+    text-align: center;
+  }
+  
+  .td_l{ /* 왼쪽 정렬 */
+    border: solid 1px #999999;
+    text-align: left;
+  }
+  
+  .message{
+    width: 80%;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+  }  
+  
+  .focus1{                   /* 모든 SPAN 태그에 적용 */
+    font-weight: bold;  /* 강조 효과 */
+    font-size: 32px;      /* 글자 크기 */
+    color: #00FF00;      /* 글자 색깔 */
+    background-color: #FFFF00; /* 배경 색깔 */   
+  }
+  
+  .focus2{
+    font-weight: bold;
+    font-size: 50px;
+    color: #FFFFFF;
+    background-color: #00AA00;
+  }
+  
+  .aside_menu{ /* 서브 메뉴 */
+    width: 100%;
+    border: none;
+    margin: 20px auto;
+  }
+  
+  .menu_line{
+    width: 100%;
+    border-bottom: solid 1px #555555;
+    margin: 20px 0px 10px 0px; /* top right bottom left */
+  }   
+  
+  fieldset.none_line{
+    margin: 0px 10px; /* 위아래 좌우 */
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none; 
+    
+  }
+  
+  /*
+      <UL>
+        <LI class='right'>
+  */
+  ul li.right{
+    list-style: none; /* 블렛 기호 생략 */
+    margin: 10px 30px 10px 0px; /* top right bottom left */
+    text-align: right;  
+  } 
+  
+  ul li.center{
+    list-style: none; /* 블렛 기호 생략 */
+    margin: 10px 30px 10px 0px; /* top right bottom left */
+    text-align: center;  
+  }
+  
+  .bottom{
+    clear: both;
+    text-align: center;
+    margin: 30px auto;
+  }
+  
+  /* <DIV id='top_menu', 페이지에서 1번만 사용됨  */
+  #top_menu{
+    margin-top: 0px; 
+    width: 100%;
+    height: 150px;
+  }
+  
+  .top_menu_label{
+    position: relative; /* 속해 있는 부모 태그 기준 좌표 이동*/
+    top: 0%;
+    left: 0%;
+    color: #333333;
+    
+  }
+  
+  .top_menu_list{
+    position: relative; /* 속해 있는 부모 태그 기준 좌표 이동*/
+    top: 80%;
+    left: 0%;
+    background-color: rgba(0, 0, 255, 0.2); /* 0.2: Alpha 값 투명도 */   
+    color: white;
+  }
+
+  /* 의사 클래스(pseudo-class) 를 이용한 CSS 적용, <A class='menu_link'  */
+  .menu_link:link{
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu_link:visited{  /* 방문후 상태 */
+    color: white;
+    text-decoration: none; /* 밑줄 삭제 */
+  }
+    
+  .menu_link:hover{  /* A 태그에 마우스가 올라간 상태 */
+    color: white;
+    font-weight: bold;
+    text-decoration: none; /* 밑줄 삭제 */
+  }
+  
+  .menu_link:active{  /* A 태그를 클릭한 상태 */
+    color: white;
+    text-decoration: none; /* 밑줄 삭제 */
+
+  }
+  
+  /* 경고 메시지 출력 예) <SPAN class='warning'> */   
+  .warning{ 
+    color: #FFFFFF;
+    background-color: #FF0000;
+    font-weight: bold;
+  }
+ 
+  /* 알림 메시지 출력, <SPAN class='info'> */
+  .info{
+    color: #FFFFFF;
+    background-color: #00AA00;
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
